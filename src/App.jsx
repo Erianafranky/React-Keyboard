@@ -12,12 +12,7 @@ const App = () => {
 		});
 		currentlyFocusedInput.focus();
 	};
-
-	 const deleteHandler = (e) => {
-		 e[-1].parentNode.removeChild(e[-1])
-	 }
-   
-
+	
 	return (
 		<div className='App'>
 			<div className='login-form'>
@@ -152,7 +147,7 @@ const App = () => {
 					<button value='m' onClick={buttonHandler}>
 						M
 					</button>
-					<button className='btn-large' onClick={deleteHandler}>
+					<button className='btn-large'>
 						Backspace
 					</button>
 				</div>
