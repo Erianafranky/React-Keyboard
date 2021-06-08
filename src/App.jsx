@@ -1,4 +1,4 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 
 const App = () => {
 	// create a state to hold the currently active/focused input element
@@ -12,6 +12,11 @@ const App = () => {
 		});
 		currentlyFocusedInput.focus();
 	};
+
+	 const deleteHandler = (e) => {
+		 e[-1].parentNode.removeChild(e[-1])
+	 }
+   
 
 	return (
 		<div className='App'>
@@ -37,48 +42,119 @@ const App = () => {
 					<button value='2' onClick={buttonHandler}>
 						2
 					</button>
-					<button>3</button>
-					<button>4</button>
-					<button>5</button>
-					<button>6</button>
-					<button>7</button>
-					<button>8</button>
-					<button>9</button>
-					<button>0</button>
+					<button value='3' onClick={buttonHandler}>
+						3
+					</button>
+					<button value='4' onClick={buttonHandler}>
+						4
+					</button>
+					<button value='5' onClick={buttonHandler}>
+						5
+					</button>
+					<button value='6' onClick={buttonHandler}>
+						6
+					</button>
+					<button value='7' onClick={buttonHandler}>
+						7
+					</button>
+					<button value='8' onClick={buttonHandler}>
+						8
+					</button>
+					<button value='9' onClick={buttonHandler}>
+						9
+					</button>
+					<button value='0' onClick={buttonHandler}>
+						0
+					</button>
+					
 				</div>
 				<div className='key-row'>
-					<button>Q</button>
-					<button>W</button>
-					<button>E</button>
-					<button>R</button>
-					<button>T</button>
-					<button>Y</button>
-					<button>U</button>
-					<button>I</button>
-					<button>O</button>
-					<button>P</button>
+					<button value='q' onClick={buttonHandler}>
+						Q
+					</button>
+					<button value='w' onClick={buttonHandler}>
+						W
+					</button>
+					<button value='e' onClick={buttonHandler}>
+						E
+					</button>
+					<button value='r' onClick={buttonHandler}>
+						R
+					</button>
+					<button value='t' onClick={buttonHandler}>
+						T
+					</button>
+					<button value='y' onClick={buttonHandler}>
+						Y
+					</button>
+					<button value='u' onClick={buttonHandler}>
+						U
+					</button>
+					<button value='i' onClick={buttonHandler}>
+						I
+					</button>
+					<button value='o' onClick={buttonHandler}>
+						O
+					</button>
+					<button value='p' onClick={buttonHandler}>
+						P
+					</button>
 				</div>
 				<div className='key-row'>
-					<button>A</button>
-					<button>S</button>
-					<button>D</button>
-					<button>F</button>
-					<button>G</button>
-					<button>H</button>
-					<button>J</button>
-					<button>K</button>
-					<button>L</button>
+					<button value='a' onClick={buttonHandler}>
+						A
+					</button>
+					<button value='s' onClick={buttonHandler}>
+						S
+					</button>
+					<button value='d' onClick={buttonHandler}>
+						D
+					</button>
+					<button value='f' onClick={buttonHandler}>
+						F
+					</button>
+					<button value='g' onClick={buttonHandler}>
+						G
+					</button>
+					<button value='h' onClick={buttonHandler}>
+						H
+					</button>
+					<button value='j' onClick={buttonHandler}>
+						J
+					</button>
+					<button value='k' onClick={buttonHandler}>
+						K
+					</button>
+					<button value='l' onClick={buttonHandler}>
+						L
+					</button>
 				</div>
 				<div className='key-row'>
 					<button>Shift</button>
-					<button>Z</button>
-					<button>X</button>
-					<button>C</button>
-					<button>V</button>
-					<button>B</button>
-					<button>N</button>
-					<button>M</button>
-					<button className='btn-large'>Backspace</button>
+					<button value='z' onClick={buttonHandler}>
+						Z
+					</button>
+					<button value='x' onClick={buttonHandler}>
+						X
+					</button>
+					<button value='c' onClick={buttonHandler}>
+						C
+					</button>
+					<button value='v' onClick={buttonHandler}>
+						V
+					</button>
+					<button value='b' onClick={buttonHandler}>
+						B
+					</button>
+					<button value='n' onClick={buttonHandler}>
+						N
+					</button>
+					<button value='m' onClick={buttonHandler}>
+						M
+					</button>
+					<button className='btn-large' onClick={deleteHandler}>
+						Backspace
+					</button>
 				</div>
 				<div className='key-row'>
 					<button className='btn-full'></button>
